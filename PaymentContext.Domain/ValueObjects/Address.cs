@@ -17,13 +17,13 @@ namespace PaymentContext.Domain.ValueObjects
 
       AddNotifications(new Contract<Address>()
         .Requires()
-        .IsLowerThan(Street, 3, "Address.Street", "Rua deve conter pelo menos 3 caracteres")
-        .IsLowerThan(Number, 1, "Address.Number", "Rua deve conter pelo menos 1 caracteres")
-        .IsLowerThan(Neighborhood, 3, "Address.Neighborhood", "Bairro deve conter pelo menos 3 caracteres")
-        .IsLowerThan(City, 3, "Address.City", "Cidade deve conter pelo menos 3 caracteres")
-        .IsLowerThan(State, 3, "Address.State", "Estado deve conter pelo menos 3 caracteres")
-        .IsLowerThan(Country, 3, "Address.Country", "País deve conter pelo menos 3 caracteres")
-        .IsLowerThan(ZipCode, 3, "Address.ZipCode", "CEP deve conter pelo menos 3 caracteres")
+        .IsGreaterThan(Street, 3, "Address.Street", "Rua deve conter pelo menos 3 caracteres")
+        .IsGreaterThan(Number, 1, "Address.Number", "Rua deve conter pelo menos 1 caracteres")
+        .IsGreaterThan(Neighborhood, 3, "Address.Neighborhood", "Bairro deve conter pelo menos 3 caracteres")
+        .IsGreaterThan(City, 3, "Address.City", "Cidade deve conter pelo menos 3 caracteres")
+        .IsGreaterThan(State, 3, "Address.State", "Estado deve conter pelo menos 3 caracteres")
+        .IsGreaterThan(Country, 3, "Address.Country", "País deve conter pelo menos 3 caracteres")
+        .IsGreaterThan(ZipCode, 3, "Address.ZipCode", "CEP deve conter pelo menos 3 caracteres")
       );
     }
 
