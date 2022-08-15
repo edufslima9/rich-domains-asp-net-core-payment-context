@@ -19,7 +19,7 @@ namespace PaymentContext.Domain.Commands
     public decimal Total { get; set; }
     public decimal TotalPaid { get; set; }
     public string Payer { get; set; }
-    public Document PayerDocument { get; set; }
+    public string PayerDocument { get; set; }
     public EDocumentType PayerDocumentType { get; set; }
     public string PayerEmail { get; set; }
     public string Street { get; set; }
@@ -32,7 +32,7 @@ namespace PaymentContext.Domain.Commands
 
     public void Validate()
     {
-      throw new NotImplementedException();
+      
     }
   }
 }
